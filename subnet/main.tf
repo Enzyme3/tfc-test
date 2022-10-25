@@ -17,6 +17,6 @@ data "tfe_outputs" "foo" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  project                 = data.tfe_outputs.foo.project_id
+  project                 = data.tfe_outputs.foo.values.project_id
   name                    = "vpc-network"
 }
