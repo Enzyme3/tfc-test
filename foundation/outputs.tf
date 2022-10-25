@@ -1,3 +1,3 @@
 output "project_id" {
-    value = google_project.project.id
+    value = substr(google_project.project.id, 9)
 }
